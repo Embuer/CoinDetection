@@ -23,8 +23,8 @@ cv2.createTrackbar("VALUE Min", "HSV", 0, 255, empty)
 cv2.createTrackbar("VALUE Max", "HSV", 255, 255, empty)
 
 while True:
-    # img = cap.read()
-    img = cv2.imread("Webp.net-resizeimage.jpg")
+    _, img = cap.read()
+    # img = cv2.imread("Webp.net-resizeimage.jpg")
     img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     h_min = cv2.getTrackbarPos("HUE Min", "HSV")
